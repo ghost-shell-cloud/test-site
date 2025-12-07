@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHOST SHELL Test - Static Website</title>
+    <style>
+        body {
+            font-family: 'Monaco', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            border: 2px solid #00ff00;
+            padding: 40px;
+            max-width: 600px;
+        }
+        h1 { color: #00ff00; }
+        .status { color: #00ff00; font-size: 24px; }
+        .info { color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ GHOST SHELL Deployment Test</h1>
+        <p class="status">Static Website - RUNNING</p>
+        <div class="info">
+            <p>Project: 01-static-website</p>
+            <p>Type: HTML/CSS/JS</p>
+            <p>Deployed via: GitHub Deploy Template</p>
+            <p id="time"></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('time').textContent = 'Loaded: ' + new Date().toLocaleString();
+    </script>
+</body>
+</html>

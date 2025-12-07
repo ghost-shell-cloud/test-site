@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+      - CUSTOM_VAR=${CUSTOM_VAR:-default_value}
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-https://api.example.com}
+    restart: unless-stopped
